@@ -1,0 +1,192 @@
+/* -- Reset -- */
+* {
+    box-sizing: border-box;
+    font-family: "Rubik", sans-serif;
+    scroll-behavior: smooth;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+}
+
+body {
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
+
+header,
+section,
+footer {
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* -- Global Styles -- */
+section {
+    scroll-margin-top: 80px;
+    padding: 60px 0;
+
+    // Mobile
+    @media (max-width: 767px) {
+        scroll-margin-top: 60px;
+        padding: 40px 0;
+    }
+}
+
+.container-xl,
+.container-lg {
+    width: 100%; 
+    padding-left: 32px; 
+    padding-right: 32px; 
+
+    // Mobile
+    @media (max-width: 767px) {
+        padding-left: 20px; 
+        padding-right: 20px; 
+    }
+}
+
+.container-xl {
+    max-width: 1440px;
+}
+
+.container-lg {
+    max-width: 1180px;
+}
+
+h1 {
+    font-size: 68px;
+    line-height: 72px;
+
+    // Mobile
+    @media (max-width: 767px) {
+        font-size: 42px;
+        line-height: 48px;
+    }
+}
+
+h2 {
+    font-size: 42px;
+    line-height: 48px; 
+
+    // Mobile
+    @media (max-width: 767px) {
+        font-size: 32px;
+        line-height: 38px; 
+    }
+}
+
+/* -- Form --*/
+form {
+    .form-row {
+        display: flex;
+        gap: 10px;
+        margin-bottom: 14px;
+    }
+
+    .form-input {
+        width: 100%;
+    }
+
+    label {
+        display: block;
+        font-size: 14px;
+        line-height: 16px;
+        margin-bottom: 4px;
+    }
+
+    input,
+    textarea {
+        border: 1px solid $secondary;
+        padding: 8px;
+        border-radius: 4px;
+        width: 100%;
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .form-submit-btn {
+        border-radius: 16px;
+    }
+}
+
+/* -- Utility Classes -- */
+.btn {
+    appearance: none;
+    display: block;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    border-radius: 16px;
+    width: max-content;
+    padding: 24px 42px;
+    cursor: pointer;
+    transition: .3s linear;
+
+    &--primary {
+        color: $white;
+        background-color: $primary;
+        border: 1px solid $primary;
+
+        &:hover {
+            background-color: $secondary;
+            border: 1px solid $secondary;
+            transition: .3s linear;
+        }
+    }
+}
+
+/* --- Animations --- */
+.js-animation-fade-in,
+.js-animation-fade-in-children {
+    opacity: 0;
+    transition: opacity .3s;
+
+    &.js-animation-visible {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,64 @@
+.why-lvp {
+    padding: 40px 20px;
+
+    // Mobile
+    @media (max-width: 767px) {
+        padding: 40px 20px 10px;
+    }
+
+    &__title {
+        color: $primary;
+        text-align: center;
+        margin-bottom: 42px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        border-bottom: 1px solid rgba($primary, .3);
+        padding: 20px 40px;
+        margin-bottom: 30px;
+
+        // Mobile
+        @media (max-width: 767px) {
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+    }
+
+    &__item-number {
+        flex-shrink: 0;
+        font-size: 14px;
+        font-weight: bold;
+        color: $primary;
+
+        // Mobile
+        @media (max-width: 767px) {
+            border: 1px solid $primary;
+            border-radius: 50%;
+            padding: 8px;
+        }
+    }
+
+    &__item-title {
+        font-size: 28px;
+        line-height: 32px;
+        font-weight: bold;
+        color: $primary;
+        width: 40%;
+
+        // Mobile
+        @media (max-width: 767px) {
+            font-size: 22px;
+            line-height: 26px;
+            width: initial;
+        }
+    }
+
+    &__item-description {
+        color: $text-black;
+        width: 100%;
+    }
+    
+}

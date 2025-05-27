@@ -1,0 +1,43 @@
+.how-can-we-help-you {
+    background-color: $lightBackground;
+
+    &__title {
+        color: $text-black;
+        text-align: center;
+    }
+
+    &__subtitle {
+        color: $text-grayish-green;
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    &__timeline {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    &__timeline-desktop {
+        max-width: 100%;
+
+        // Mobile
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__timeline-mobile {
+        display: none;
+
+        // Mobile
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+
+    &__cta {
+        margin: 60px auto 0;
+    }
+}

@@ -1,0 +1,118 @@
+@use "sass:map";
+
+.our-services {
+    color: $white;
+    background-color: $secondary;
+
+    &__title {
+        color: $white;
+        margin-bottom: 42px;
+    }
+
+    &__wrapper-desktop {
+        display: grid;
+        grid-template-columns: .4fr 1fr;
+        gap: 40px;
+
+        // Mobile
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__index {
+        overflow: hidden;
+    }
+
+    .tab-link {
+        position: relative;
+        font-size: 22px;
+        line-height: 28px;
+        font-weight: map.get($font-weights, 'light');
+        padding-right: 30px;
+        margin-bottom: 16px;
+        cursor: pointer;
+        transition: .3s linear;
+
+        &::before,
+        &::after {
+            content: url('images/icons/icon-chevron-right--primary.svg');
+            position: absolute;
+            top: 50%;
+            transition: .3s linear;
+        }
+
+        &::before {
+            left: 0;
+            transform: translate(-100%, -50%);
+        }
+
+        &::after {
+            right: 0;
+            transform: translateY(-50%);
+        }
+
+        &:hover,
+        &.active {
+            color: $primary;
+            transition: .3s linear;
+        }
+
+        &.active {
+            padding-right: 0;
+            padding-left: 40px;
+
+            &::before {
+                transform: translate(0%, -50%);
+            }
+
+            &::after {
+                transform: translate(100%, -50%);
+            }
+        }
+    }
+    
+    .tab-content {
+        display: none;
+        background-color: rgba($white, .1);
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 5px;
+        padding: 10px;
+
+        &.active {
+            display: block;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 24px;
+
+            &:first-child {
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 24px;
+                margin-bottom: 12px;
+            }
+        }
+    }
+
+    &__wrapper-mobile {
+        display: none;
+
+        div {
+            margin-bottom: 32px;
+        }
+
+        h3 {
+            font-size: 20px;
+            line-height: 24px;
+            color: $primary;
+            margin-bottom: 12px;
+        }
+
+        // Mobile
+        @media (max-width: 767px) {
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,57 @@
+.about-us {
+
+    &__container {
+        display: flex;
+        gap: 62px;
+
+        // Mobile
+        @media (max-width: 767px) {
+           flex-wrap: wrap;
+           gap: 42px;
+        }
+    }
+
+    &__image-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 420px;
+
+        // Mobile
+        @media (max-width: 767px) {
+            width: 100%;
+            min-width: auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+
+            // Mobile
+            @media (max-width: 767px) {
+                max-height: 240px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    &__text-container {
+        
+        p {
+            margin-bottom: 12px;
+            text-align: justify;
+        }
+    }
+
+    &__title {
+        color: $secondary;
+        margin-bottom: 32px;
+
+        // Mobile
+        @media (max-width: 767px) {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+    }
+}
