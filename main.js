@@ -83,6 +83,19 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     /**
+     * Pricing Slider (mobile)
+     */
+    const swiper = new Swiper('.js-pricing-slider', {
+        loop: true,
+        slidesPerView: 1.2,
+        spaceBetween: 16, 
+        centeredSlides: true, 
+        pagination: {
+            el: '.swiper-pagination',
+        }
+    });
+
+    /**
      * Contact Form
      */
     const form = document.getElementById('js-contact-form');

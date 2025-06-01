@@ -1,0 +1,164 @@
+.pricing {
+
+    .container-lg {
+
+        // Mobile
+        @media (max-width: 767px) {
+            padding: 0;
+        } 
+    }
+
+    &__title {
+        color: $primary;
+        text-align: center;
+        margin-bottom: 42px;
+    }
+
+    &__plans-container {
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(4, 1fr);
+
+        // Mobile
+        @media (max-width: 1095px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        // Mobile
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__plans-container-mobile.swiper {
+        display: none ;
+
+        // Mobile
+        @media (max-width: 767px) {
+            display: flex;
+            padding-bottom: 62px;
+        }
+    }
+
+    &__plan {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        background-color: $white;
+        border: 1px solid $primary;
+        border-radius: 8px;
+        padding: 52px 20px 32px;
+        transform: scale(1);
+        transition: .1s linear;
+
+        // Mobile
+        @media (max-width: 767px) {
+            border: none;
+            background-color: $lightBackground;
+        }
+
+        &:hover {
+            background-color: $lightBackground;
+            transform: scale(1.01);
+            transition: .1s linear;
+        }
+
+        & > a {
+            position: absolute;
+            inset: 0;
+        }
+
+        h3 {
+            font-size: 24px;
+            line-height: 28px;
+            font-weight: 400;
+            color: $primary;
+            text-align: center;
+            margin-bottom: 6px;
+        }
+    }
+
+    &__plan-price {
+        font-size: 48px;
+        line-height: 52px;
+        font-weight: 700;
+        color: $primary;
+        text-align: center;
+        margin-bottom: 24px;
+
+        span {
+            font-size: 14px;
+            line-height: 16px;
+        }
+    }
+
+    &__plan-features {
+
+        p {
+            font-weight: 700;
+            color: $text-black;
+            margin-bottom: 12px;
+        }
+
+        ul {
+            
+            li {
+                display: flex;
+                gap: 6px;
+                font-size: 14px;
+                line-height: 18px;
+                color: $text-black;
+                margin-bottom: 8px;
+
+                &::before {
+                    content: url(../../images/icons/tick-icon.svg);
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                // Mobile
+                @media (max-width: 767px) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+
+    &__plan-footer {
+        margin-top: 42px;
+
+        // Mobile
+        @media (max-width: 767px) {
+            margin-top: 32px;
+        }
+
+        button {
+            padding: 16px 42px;
+            margin: 0 auto;
+        }
+    }
+
+    .swiper {
+
+        .swiper-slide {
+            display: flex;
+            height: auto;
+        }
+        
+        .swiper-pagination {
+
+            .swiper-pagination-bullet {
+                width: 16px;
+                height: 16px;
+
+                &-active {
+                    color: $primary;
+                }
+            }
+        }
+    }
+}
