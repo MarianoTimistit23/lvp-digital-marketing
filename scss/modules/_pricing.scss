@@ -15,6 +15,14 @@
     }
 
     &__plans-container {
+
+        // Mobile
+        @media (max-width: 767px) {
+            display: none;
+        }
+    }
+
+    &__plans-subcontainer-top {
         display: grid;
         gap: 20px;
         grid-template-columns: repeat(4, 1fr);
@@ -23,10 +31,34 @@
         @media (max-width: 1095px) {
             grid-template-columns: repeat(2, 1fr);
         }
+    }
 
-        // Mobile
-        @media (max-width: 767px) {
-            display: none;
+    &__plans-subcontainer-bottom {
+
+        & > h3 {
+            font-size: 42px;
+            line-height: 48px;
+            color: $primary;
+            text-align: center;
+            margin: 42px 0;
+        }
+
+        .pricing__plan {
+            width: 50%;
+            border: 2px dashed $primary;
+            padding: 32px;
+            margin: 0 auto;
+
+            h3 {
+                font-size: 34px;
+                line-height: 40px;
+                margin-bottom: 24px;
+            }
+
+            .pricing__plan-features {
+                width: max-content;
+                margin: 0 auto;
+            }
         }
     }
 

@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function() {
      * Pricing Slider (mobile)
      */
     const swiper = new Swiper('.js-pricing-slider', {
-        loop: true,
+        loop: false,
         slidesPerView: 1.2,
         spaceBetween: 16, 
         centeredSlides: true, 
